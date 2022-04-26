@@ -1,0 +1,2327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QFrmMain</class>
+ <widget class="QMainWindow" name="QFrmMain">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>GHC</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Resources/ghc.qrc">
+    <normaloff>:/Resources/favicon</normaloff>:/Resources/favicon</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="cb_stage">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>45</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="maxVisibleItems">
+     <number>5</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stage</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>155</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tokens/Win</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>177</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tokens/End</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>200</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Needed Wins</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>601</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Resources/bg) 0 0 0 0 stretch stretch;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tokens</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cb_v_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>190</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_v_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>307</x>
+      <y>190</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>473</x>
+      <y>107</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>107</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>307</x>
+      <y>149</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>107</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>149</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>65</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>107</y>
+      <width>79</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_v_5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>190</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>65</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>149</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>149</y>
+      <width>79</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>107</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_v_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>473</x>
+      <y>190</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>473</x>
+      <y>65</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>149</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_f_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>473</x>
+      <y>149</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>65</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>307</x>
+      <y>65</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_m_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>65</y>
+      <width>79</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_v_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>190</y>
+      <width>79</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_v_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>190</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cb_s_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>307</x>
+      <y>107</y>
+      <width>80</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9/10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10/10</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSpinBox" name="sb_tokens">
+    <property name="geometry">
+     <rect>
+      <x>679</x>
+      <y>45</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="showGroupSeparator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="maximum">
+     <number>102600</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdWins">
+    <property name="geometry">
+     <rect>
+      <x>713</x>
+      <y>200</y>
+      <width>70</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>true</bool>
+    </property>
+    <property name="digitCount">
+     <number>6</number>
+    </property>
+    <property name="mode">
+     <enum>QLCDNumber::Dec</enum>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Filled</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>51300.000000000000000</double>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>51300</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdEnd">
+    <property name="geometry">
+     <rect>
+      <x>713</x>
+      <y>180</y>
+      <width>70</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>true</bool>
+    </property>
+    <property name="digitCount">
+     <number>6</number>
+    </property>
+    <property name="value" stdset="0">
+     <double>102600.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdTokens">
+    <property name="geometry">
+     <rect>
+      <x>713</x>
+      <y>160</y>
+      <width>70</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>true</bool>
+    </property>
+    <property name="digitCount">
+     <number>6</number>
+    </property>
+    <property name="value" stdset="0">
+     <double>2.000000000000000</double>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>cb_stage</zorder>
+   <zorder>label</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>cb_v_2</zorder>
+   <zorder>cb_v_4</zorder>
+   <zorder>cb_s_6</zorder>
+   <zorder>cb_s_5</zorder>
+   <zorder>cb_f_4</zorder>
+   <zorder>cb_s_2</zorder>
+   <zorder>cb_f_1</zorder>
+   <zorder>cb_m_1</zorder>
+   <zorder>cb_s_3</zorder>
+   <zorder>cb_v_5</zorder>
+   <zorder>cb_m_5</zorder>
+   <zorder>cb_f_5</zorder>
+   <zorder>cb_f_3</zorder>
+   <zorder>cb_s_1</zorder>
+   <zorder>cb_v_6</zorder>
+   <zorder>cb_m_6</zorder>
+   <zorder>cb_f_2</zorder>
+   <zorder>cb_f_6</zorder>
+   <zorder>cb_m_2</zorder>
+   <zorder>cb_m_4</zorder>
+   <zorder>cb_m_3</zorder>
+   <zorder>cb_v_3</zorder>
+   <zorder>cb_v_1</zorder>
+   <zorder>cb_s_4</zorder>
+   <zorder>sb_tokens</zorder>
+   <zorder>lcdWins</zorder>
+   <zorder>lcdEnd</zorder>
+   <zorder>lcdTokens</zorder>
+  </widget>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Resources/ghc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

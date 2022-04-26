@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="Resources">
+    <file alias="bg">ghc_.png</file>
+    <file alias="favicon">icon_.png</file>
+  </qresource>
+</RCC>
