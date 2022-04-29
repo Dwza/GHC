@@ -43,7 +43,7 @@ class FrmMain(QMainWindow, Ui_QFrmMain):
                 "tokens": 0,
                 "maxNeededTokens": 102600,
                 "sections": ['m', 's', 'f', 'v'],
-                "stageTokens": [2, 2, 3, 4, 5],
+                "stageTokens": [2, 2, 3, 4, 4],
                 "subFromLvl": [12.5, 50, 125, 325, 575, 875, 1575, 2375, 3275, 4275],
                 "totalTokens": 102600
             },
